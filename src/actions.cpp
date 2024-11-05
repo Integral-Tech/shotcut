@@ -84,8 +84,8 @@ void ShotcutActions::loadFromMenu(QMenu *menu, QString group)
             if (action->objectName().isEmpty()) {
                 // Each action must have a unique object name
                 QString newObjectName = group + action->iconText();
-                newObjectName = newObjectName.replace(" ", "");
-                newObjectName = newObjectName.replace(">", "");
+                newObjectName.replace(" ", "");
+                newObjectName.replace(">", "");
                 action->setObjectName(newObjectName);
             }
             add(action->objectName(), action, group);
